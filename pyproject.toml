@@ -1,0 +1,12 @@
+[project]
+name = "filesystem-resolver"
+description = "vLLM plugin for dynamically discovering LoRA adapters on the local filesystem"
+readme = "README.md"
+license = {text = "Apache 2"}
+version = "0.1.0"
+dependencies = [
+  'vllm',
+]
+
+[project.entry-points."vllm.general_plugins"]
+filesystem_resolver = "filesystem_resolver:register"
